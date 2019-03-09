@@ -1,0 +1,26 @@
+<head>
+    <link rel="stylesheet" href="../css/mystyle.css">
+
+</head>
+
+<div class="row search_box">
+    <div class="container">
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" ng-model="username">
+
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" ng-model="password">
+        <div>
+            <br>
+            <h6 ng-show="change.noshow" style="color: #ff064a; "><strong>Username Not Exist!</strong></h6>
+            <h6 ng-show="change.yesshow" style="color: #ff064a; "><strong>Password Invalid!</strong></h6>
+            <h6 ng-show="change.yes" style="color: #a6e22e; "><strong>Login Successful!</strong></h6>
+            <button type="submit" ng-click="login()">Login</button>
+            <button class="button2" type="submit" ng-click="register()">Register</button>
+        </div>
+
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+    </div>
+</div>

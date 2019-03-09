@@ -1,0 +1,57 @@
+<div class="row align-middle">
+    <a ng-click="leftFunc()" ng-href="#/detail/{{nextLeft}}">
+        <div class="columns small-1 medium-1 large-1 text-left" style="position: absolute; top:53%;">
+            <!--<a ng-click="leftFunc()" ng-href="#/detail/{{nextLeft}}">-->
+            <div class="buttons-left">
+                <button class="fa fa-arrow-left fa-2x custom-icon-arrow"></button>
+            </div>
+            <!--</a>-->
+        </div>
+    </a>
+    <a ng-click="rightFunc()" ng-href="#/detail/{{nextRight}}">
+        <div class="columns small-1 small-push-11 medium-1 medium-10 medium-push-11 large-1 large-push-11" style="position: absolute; top:53%;">
+            <!--<a ng-click="rightFunc()" ng-href="#/detail/{{nextRight}}">-->
+            <div class="buttons-right">
+                <button class="fa fa-arrow-right fa-2x custom-icon-arrow" ></button>
+            </div>
+            <!--</a>-->
+        </div>
+    </a>
+    <div class="small-9 small-push-2 columns" style="position: absolute; top:33%;">
+        <div class="row align-middle" ng-repeat="movie in stepsModel | filter:showMovie">
+            <div class="small-10 small-centered medium-4 medium-push-0 large-4 large-push-0 columns">
+                <div class="panel">
+                    <img class="thumb" ng-src="{{movie.image}}" />
+                </div>
+                <span>
+                    <h6><strong>{{movie.title}}</strong></h6>
+                </span>
+                <strong>Change Image Name <i style = "color: #ff064a">*</i></strong>
+                <div>
+                    <input type="text" class="form-control" ng-model="change.name" style="border:1px solid #000000"/>
+                    <h6 ng-show="change.show" style="color: #ff064a; "><strong>Duplicate Name!</strong></h6>
+                    <button class="button4" ng-click="reset(change)">Reset</button>
+                    <!--&nbsp;&nbsp; &nbsp;&nbsp;<button class="fa fa-thumbs-up fa-2x thumbs_up" ></button>-->
+                    &nbsp;&nbsp; &nbsp;&nbsp;<button class="fa fa-thumbs-down fa-2x thumbs_down" ng-click="delete()" ></button>
+                </div>
+                <br>
+                <strong>Share With Friends</strong>
+                <div>
+                    <input type="text" class="form-control" ng-model="share.name" style="border:1px solid #000000"/>
+                    <h6 ng-show="share.show1" style="color: #ff064a; "><strong>User Not Exists!</strong></h6>
+                    <h6 ng-show="share.show2" style="color: #1bff0d; "><strong>Shared Successfully!</strong></h6>
+                    <button class="button5" ng-click="share_image(share)">Share</button>
+                </div>
+            </div>
+            <div class="small-10 small-pull-1 medium-8 medium-pull-0 large-8 columns large-pull-0">
+                <div class="panel">
+                    <img data-ng-src="{{processed}}" class="thumb" />
+                </div>
+                <span>
+                    <h6 style="font-size: x-large"><strong>Image Labels: {{label}}</strong></h6>
+                </span>
+            </div>
+        </div>
+    </div>
+
+</div>

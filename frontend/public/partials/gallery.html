@@ -1,0 +1,106 @@
+<br>
+<br>
+<div class="row text-left">
+    <!--<div class= "small-3 medium-6 large-12 text-left end columns">-->
+    <div class ="small-4 medium-3 large-1    columns">
+        <input type="radio" id="r1" name="rr" ng-model="search" value="aeroplane">
+        <label for="r1"><span></span>Aeroplane</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r2" name="rr" ng-model="search" value="bicycle">
+        <label for="r2"><span></span>Bicycle</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r3" name="rr" ng-model="search" value="bird">
+        <label for="r3"><span></span>Bird</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r4" name="rr" ng-model="search" value="boat">
+        <label for="r4"><span></span>Boat</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r5" name="rr" ng-model="search" value="bottle">
+        <label for="r5"><span></span>Bottle</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r6" name="rr" ng-model="search" value="bus">
+        <label for="r6"><span></span>Bus</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r7" name="rr" ng-model="search" value="car">
+        <label for="r7"><span></span>Car</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r8" name="rr" ng-model="search" value="cat">
+        <label for="r8"><span></span>Cat</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r9" name="rr" ng-model="search" value="chair">
+        <label for="r9"><span></span>Chair</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r10" name="rr" ng-model="search" value="cow">
+        <label for="r10"><span></span>Cow</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r11" name="rr" ng-model="search" value="diningtable">
+        <label for="r11"><span></span>Table</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r12" name="rr" ng-model="search" value="dog">
+        <label for="r12"><span></span>Dog</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r13" name="rr" ng-model="search" value="horse">
+        <label for="r13"><span></span>Horse</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r14" name="rr" ng-model="search" value="motorbike">
+        <label for="r14"><span></span>Motorbike</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r15" name="rr" ng-model="search" value="person">
+        <label for="r15"><span></span>Person</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r16" name="rr" ng-model="search" value="pottedplant">
+        <label for="r16"><span></span>Plant</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r17" name="rr" ng-model="search" value="sheep">
+        <label for="r17"><span></span>Sheep</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r18" name="rr" ng-model="search" value="sofa">
+        <label for="r18"><span></span>Sofa</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r19" name="rr" ng-model="search" value="train">
+        <label for="r19"><span></span>Train</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 columns">
+        <input type="radio" id="r20" name="rr" ng-model="search" value="tvmonitor">
+        <label for="r20"><span></span>TV</label>
+    </div>
+    <div class ="small-4 medium-3 large-1 large-pull-3 columns">
+        <input type="radio" id="r21" name="rr" ng-model="search" value="all">
+        <label for="r21"><span></span>All</label>
+    </div>
+</div>
+<div class= "small-11 small-centered columns">
+    <label>Query My Photos:
+        <input class="movie_search" type="search" name="search" placeholder="Search" ng-model="query">
+    </label>
+</div>
+<div class="row align-center" style="margin-top: 2rem;">
+    <div class ="small-up-2 small-offset-1 medium-up-4 medium-offset-0 large-up-6 large-offset-0 columns">
+        <div class ="column gal_col" ng-repeat="item in stepsModel | filter:queryMovie | filter:showMovie ">
+            <a ng-click="myFunc(item)" ng-href="#/detail/{{item.title}}">
+                <img class="thumb" ng-src="{{item.image}}" />
+                <span>
+                    <h6><strong>{{item.title}}</strong></h6>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>

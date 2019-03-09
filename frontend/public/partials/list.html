@@ -1,0 +1,65 @@
+<div class="row search_box">
+
+    <div class= "small-12 small-centered columns">
+        <label>Photo Name:
+            <input class="movie_search" type="search" name="search" placeholder="Search" ng-model="search.stri">
+        </label>
+    </div>
+
+    <div class= "small-12 small-centered columns">
+        <label>Options:
+            <select ng-model="search.by">
+                <option value="title"> Title</option>
+                <option value="rank">Rank</option>
+            </select>
+        </label>
+    </div>
+    <div class="row">
+        <div class= "small-4 columns">
+            <form >
+                <input type="radio" id="r30" name="rr"  ng-model="search.in" ng-value=false>
+                <label for="r30"><span></span>Ascending</label> &nbsp;
+                <input type="radio" id="r31" name="rr"  ng-model="search.in" ng-value=true>
+                <label for="r31"><span></span>Descending</label>
+            </form>
+        </div>
+        <!--<div class= "small-3 columns">-->
+            <!--<input type='file' ng-model-instant onchange="angular.element(this).scope().imageUpload(event)" multiple />-->
+        <!--</div>-->
+        <div class="upload-btn-wrapper small-3 columns">
+            <button class="btn">Upload a file</button>
+            <input type='file' ng-model-instant onchange="angular.element(this).scope().imageUpload(event)" multiple />
+        </div>
+    </div>
+
+</div>
+<div class="row align-center" style="margin-top: 2rem;">
+    <div class ="row small-up-1 small-push-1 medium-up-3 medium-push-1 large-up-4 large-push-0 text-left">
+        <div class ="column mycol"  ng-repeat="item in stepsModel | listfilter:search.stri | orderBy:search.by:search.in">
+            <a ng-click="myFunc(item)" ng-href="#/detail/{{item.title}}">
+                <img class="thumb" ng-src="{{item.image}}" />
+                <span>
+                    <h6><strong>{{item.title}}</strong></h6>
+                    <h6><strong>{{item.share_person}}</strong></h6>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--<div class="row align-center" style="margin-top: 2rem;">-->
+        <!--<div class ="row small-up-1 small-push-1 medium-up-3 medium-push-1 large-up-4 large-push-0 text-left">-->
+            <!--<div class ="column mycol"  ng-repeat="item in data | filter:search.stri | orderBy:search.by:search.in">-->
+                <!--<a ng-click="myFunc(item)" ng-href="#/detail/{{item.imdbID}}">-->
+                    <!--<img src="./data/images/{{item.imdbID}}.jpg" alt="Image" style="width:70px; height:120px;"/>-->
+                    <!--<span>-->
+                        <!--<h6><strong>{{item.title}}</strong></h6>-->
+                        <!--<p>Rank: {{item.rank}} <br>-->
+                            <!--Released: {{item.released}} <br>-->
+                            <!--Length: {{item.runtime}} <br>-->
+                            <!--Rated: {{item.rated}}</p>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</div>-->
+<!--</div>-->

@@ -1,0 +1,16 @@
+<br>
+<br>
+<div class="row align-center" style="margin-top: 2rem;">
+    <div class ="small-up-2 small-offset-1 medium-up-4 medium-offset-0 large-up-6 large-offset-0 columns">
+        <h6 ng-show="share.show1" style="color: #ff064a; font-size: 32px; text-align: center"><strong>No Shared Images</strong></h6>
+        <div class ="column gal_col" ng-repeat="item in shared_images">
+            <!--<a ng-click="myFunc(item)" ng-href="#/detail/{{item.title}}">-->
+                <img class="thumb" ng-src="{{item.image}}" />
+                <span>
+                    <h6><strong>Name: {{item.title}}</strong></h6>
+                    <h6><strong>Shared by {{item.share_person}}</strong></h6>
+                </span>
+            <!--</a>-->
+        </div>
+    </div>
+</div>

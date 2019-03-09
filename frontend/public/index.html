@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>MP3 Starter</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="./media/favicon.ico">
+</head>
+
+<body ng-app="mp3">
+
+        <!--<div class="row text-center">-->
+        <div class="row text-center">
+                <h1>
+                    <a ng-href="#/list/" style="color: black;">
+                        <strong style="color: red"> Ⓜ</strong>
+                        <strong style="color: #ffa500"> ⓨ</strong>
+                        <strong style="color: #e2c927"> Ⓟ</strong>
+                        <strong style="color: #1bff0d"> ⓗ</strong>
+                        <strong style="color: #6dffec"> ⓞ</strong>
+                        <strong style="color: #3a2eff"> ⓣ</strong>
+                        <strong style="color: #e938ff"> ⓞ</strong>
+                    </a>
+                </h1>
+        </div>
+    <nav id="nav_bar">
+        <div class="row text-center" style="background-color: transparent; margin-top: 10px;">
+            <a ng-href="#/list/" class="uploadbutton">Upload</a>
+            <a ng-href="#/gallery/" class="listbutton">Gallery</a>
+            <a ng-href="#/summary/" class="mybutton">Summary</a>
+            &nbsp;&nbsp;<a ng-href="#/login/" class="loginbutton">Login</a>
+            &nbsp;&nbsp;&nbsp;<a ng-href="#/share/" class="sharebutton">Shared With Me</a>
+        </div>
+    </nav>
+     <div ng-view></div>
+
+    <!-- Angular Scripts -->
+    <!-- NOTE: removing the ".min." can help debugging in the console-->
+    <script src="./lib/angular/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
+    <!--<script src="./lib/ng-file-upload-shim"></script> &lt;!&ndash; for no html5 browsers support &ndash;&gt;-->
+    <!--<script src="./lib/ng-file-upload"></script>-->
+    <script src="./lib/angular-route/angular-route.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/controllers.js"></script>
+     <script src="./js/services.js"></script>
+    <!-- Scripts -->
+    <script src="./lib/jquery/dist/jquery.min.js"></script>
+    <script src="./lib/foundation-sites/dist/js/foundation.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+    $(document).foundation();
+    </script>
+    <script src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>

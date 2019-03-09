@@ -1,0 +1,3 @@
+https://github.com/jasalt/kuittiskanneri
+https://github.com/gothinkster/angularjs-realworld-example-app.git
+https://docs.angularjs.org/guide/directive
